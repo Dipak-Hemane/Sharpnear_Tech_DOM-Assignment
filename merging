@@ -1,0 +1,17 @@
+function margingTwoArr(nums1, nums2) {
+  let result = new Set();
+  for (let i = 0; i < nums1.length; i++) {
+    if (!result.has(nums1[i])) {
+      result.add(nums1[i]);
+    }
+  };
+  for (let i = 0; i < nums2.length; i++) {
+    if (!result.has(nums2[i])){
+    result.add(nums2[i])
+    }
+  }
+  return [...result].sort((a,b) => a - b);
+}
+let nums1 = [1, 2, 3]; 
+let nums2 = [2, 5, 6];
+console.log(margingTwoArr(nums1, nums2));
